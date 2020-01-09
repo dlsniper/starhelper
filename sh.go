@@ -36,7 +36,7 @@ func (env *App) Execute(thread *starlark.Thread, path string) error {
 			return
 		}
 		fmt.Printf("panic while running the starlark script: %v\n", err)
-		for i := 0; ; i++ {
+		for i := 3; ; i++ {
 			pc, file, line, ok := runtime.Caller(i)
 			if !ok {
 				break
